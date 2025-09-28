@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Our Solutions | GSA Data Center</title>
+  <meta name="description"
+    content="หน้ารวมบริการหลักของ GSA Data Center: Colocation, Storage, Cross‑Connect และ Remote Hands (via Tenant Portal) พร้อมพันธมิตร ความยั่งยืน FAQs และแบบฟอร์มนัดเยี่ยมชมไซต์" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    :root{
+      --bg:#050f0c;        /* ดำอมเขียวเข้ม */
+      --panel:#081612;     /* พื้นการ์ดเข้ม */
+      --muted:#0b2019;     /* เส้น/ขอบ */
+      --accent:#074c38;    /* เขียวหลัก (ดาร์กลง) */
+      --accent-2:#0c6b51;  /* เขียวรอง */
+      --text:#e6fff5;
+      --sub:#8bdabf;
+      --ring:0 0 0 3px rgb(7 76 56 / .35);
+    }
+    *{ font-family: 'Noto Sans Thai', system-ui, sans-serif; }
+    body{ background: var(--bg); color: var(--text); }
+    .nav-blur{ backdrop-filter: blur(10px); background: linear-gradient(to bottom, rgba(6,26,20,.55), rgba(6,26,20,.35)); }
+    .card{ @apply rounded-2xl p-6 border; background: radial-gradient(1200px 600px at 110% -10%, color-mix(in oklch, var(--accent) 12%, transparent) , transparent 40%), var(--panel); border-color: color-mix(in oklch, var(--muted) 92%, var(--accent) 8%); box-shadow: 0 10px 30px rgb(0 0 0 / .35), inset 0 1px 0 rgb(255 255 255 / .02); }
+    .btn-primary{ @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition; background: linear-gradient(135deg, color-mix(in oklch, var(--accent) 92%, black 8%), color-mix(in oklch, var(--accent-2) 88%, black 12%)); color:#fff; box-shadow: 0 10px 20px color-mix(in oklch, var(--accent) 25%, black 75%); }
+    .btn-primary:hover{ transform: translateY(-1px) scale(1.01); }
+    .btn-outline{ @apply inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold border transition; border-color: color-mix(in oklch, var(--accent) 35%, #0a0 65%); color: var(--sub);}
+    .tag{ @apply text-[11px] tracking-wide uppercase rounded-md px-2.5 py-1 border font-semibold; border-color: rgba(0,208,132,.35); color: var(--sub);}
+    .lead{ @apply text-[15px] md:text-base text-emerald-100/70; }
+    input, textarea, select{
+      @apply w-full rounded-xl bg-transparent border px-4 py-3 outline-none transition;
+      border-color: color-mix(in oklch, var(--muted) 85%, #0a0 15%);
+      color: var(--text);
+    }
+    input:focus, textarea:focus, select:focus{ box-shadow: var(--ring); border-color: var(--accent); }
+    .kpi{ @apply text-3xl md:text-4xl font-extrabold; color: var(--sub); }
+    .footer-link{ @apply text-emerald-100/60 hover:text-emerald-100 transition; }
+    .gridlines{ background: linear-gradient(transparent 31px, color-mix(in oklch, var(--accent) 16%, transparent) 32px), linear-gradient(90deg, transparent 31px, color-mix(in oklch, var(--accent) 16%, transparent) 32px); background-size: 32px 32px; mask-image: radial-gradient(closest-side, black 60%, transparent); }
+     .hero{
+      position: relative; min-height: 64vh; display: grid; place-items: center; text-align: center; overflow: hidden;
+      background: radial-gradient(120% 80% at 50% 10%, rgba(0,0,0,.85), rgba(0,0,0,.9)), url('./assets/images/banner-about-us.png') center/cover no-repeat, #081512;
+    }
+    .hero h1{ @apply text-[clamp(28px,4vw,48px)] font-extrabold tracking-tight; }
+    .hero p{ @apply max-w-3xl mx-auto text-emerald-100/70; }
+      .bg-gsa-neon{
+      @apply bg-[var(--sub)];
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 nav-blur border-b border-emerald-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="./assets/images/logo-gsa.png" alt="logo-gsa" class="h-[30px]">
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="aboutus.html" class="footer-link">About Us</a>
+        <a href="service.html" class="footer-link">Our Solutions</a>
+        <a href="news.html" class="footer-link">News</a>
+        <a href="career.html" class="footer-link">Career</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="#" class="btn-primary">เข้าสู่ระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Breadcrumb -->
+  <!-- <section class="hero bg-[url('./aseets/images/banner-about-us.png')]"></section> -->
+  <section class="hero">
+    <div class="px-4 py-16">
+      <div
+        class="inline-flex items-center gap-2 rounded-full border border-emerald-900/50 bg-emerald-900/20 px-3 py-1 text-xs text-emerald-100/70">
+        <span class="h-1.5 w-1.5 rounded-full bg-[var(--sub)]"></span> GSA / Our Solutions
+      </div>
+      <h1 class="mt-3 text-[clamp(28px,4vw,44px)] font-extrabold tracking-tight"># Our Solutions</h1>
+      <p class="max-w-3xl mx-auto lead mt-3">หน้านี้รวบรวมบริการหลักของ GSA Data Center ตามเอกสารสรุปความต้องการโครงการ
+        — ครอบคลุม Product 4 รายการ (Colocation, Storage, Cross‑Connect) และ Remote Hands Service ผ่าน Tenant Portal
+        พร้อมเน้นแนวทางความยั่งยืน (Sustainability Focus).</p>
+      <div class="mt-6 flex items-center justify-center gap-3">
+        <a href="#contact" class="btn-primary">Get Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-14 md:py-20 relative">
+    <div class="absolute inset-0 gridlines opacity-60"></div>
+    <div class="mx-auto max-w-7xl px-4 relative">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Our Products & Services</h2>
+      </div>
+      <div class="grid md:grid-cols-4 gap-6 mt-6">
+        <!-- Colocation -->
+        <div class="card">
+          <img src="./assets/images/service-01.png" class="mb-5" alt="Colocation">
+          <div class="text-lg font-bold">Colocation</div>
+          <p class="lead mt-2">บริการพื้นที่วางตู้แร็คและโครงสร้างพื้นฐานศูนย์ข้อมูลสำหรับลูกค้าองค์กรและ Hyperscalers
+          </p>
+          <ul class="mt-4 text-sm text-emerald-100/90 list-disc ml-5">
+            <li>Rack / Cage</li>
+            <li>Power & Cooling</li>
+            <li>24×7 Ops</li>
+          </ul>
+        </div>
+        <!-- Storage -->
+        <div class="card">
+          <img src="./assets/images/service-04.png" class="mb-5" alt="Storage">
+          <div class="text-lg font-bold">Storage</div>
+          <p class="lead mt-2">โซลูชันพื้นที่จัดเก็บข้อมูลภายในศูนย์ข้อมูล พร้อมความพร้อมใช้งานสูง</p>
+          <ul class="mt-4 text-sm text-emerald-100/90 list-disc ml-5">
+            <li>Scalable</li>
+            <li>Secure</li>
+            <li>Resilient</li>
+          </ul>
+        </div>
+        <!-- Cross-Connect -->
+        <div class="card">
+          <img src="./assets/images/service-03.png" class="mb-5" alt="Cross‑Connect">
+          <div class="text-lg font-bold">Cross‑Connect</div>
+          <p class="lead mt-2">เชื่อมต่อกันระหว่างอุปกรณ์/ผู้ให้บริการภายในศูนย์ข้อมูล ด้วยสายไฟเบอร์หรือสายทองแดง</p>
+          <ul class="mt-4 text-sm text-emerald-100/90 list-disc ml-5">
+            <li>Carrier‑neutral</li>
+            <li>Fiber / Copper</li>
+            <li>Low Latency</li>
+          </ul>
+        </div>
+        <!-- Remote Hands -->
+        <div class="card">
+          <img src="./assets/images/service-02.png" class="mb-5" alt="Remote Hands">
+          <div class="text-lg font-bold">Remote Hands (via Tenant Portal)</div>
+          <p class="lead mt-2">บริการสนับสนุนหน้างานระยะไกลสำหรับลูกค้าปัจจุบัน ดำเนินการและติดตามงานผ่าน Tenant Portal
+          </p>
+          <ul class="mt-4 text-sm text-emerald-100/90 list-disc ml-5">
+            <li>Ticketing</li>
+            <li>SLA‑based</li>
+            <li>24×7</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section id="partners" class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Our Partners</h2>
+        <span class="tag">Primary / DR · Nationwide Connectivity</span>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <!-- GULF -->
+        <div class="card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl halo grid place-items-center bg-white p-2"><img
+                src="./assets/images/gulf.webp" alt="GULF"></div>
+            <div>
+              <div class="font-bold">GULF</div>
+              <div class="text-emerald-200/70 text-xs">Energy infrastructure expertise</div>
+            </div>
+          </div>
+          <p class="lead mt-3">Energy infrastructure expertise ensuring stable, efficient power.</p>
+        </div>
+        <!-- Singtel (Nxera) -->
+        <div class="card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl halo grid place-items-center bg-white p-2"><img
+                src="./assets/images/signal.webp" alt="Singtel (Nxera)"></div>
+            <div>
+              <div class="font-bold">Singtel (Nxera)</div>
+              <div class="text-emerald-200/70 text-xs">Pan‑Asia Network & DC</div>
+            </div>
+          </div>
+          <p class="lead mt-3">Thailand’s leading telecom delivering high‑speed, secure access.</p>
+        </div>
+        <!-- AIS -->
+        <div class="card">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl halo grid place-items-center bg-white p-2"><img
+                src="./assets/images/aislogo.webp" alt="AIS"></div>
+            <div>
+              <div class="font-bold">AIS</div>
+              <div class="text-emerald-200/70 text-xs">5G · Cloud · Edge</div>
+            </div>
+          </div>
+          <p class="lead mt-3">ทำเลใกล้กรุงเทพฯ ขยาย capacity ได้ และรองรับพลังงานสะอาด</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability & Energy Efficiency -->
+  <section id="sustain" class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="card">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-xl md:text-2xl font-extrabold">Sustainability & Energy Efficiency</h3>
+            <p class="lead mt-3">โซลูชันคูลลิ่ง/ควบคุมพลังงาน (BAS) เพื่อใช้พลังงานอย่างคุ้มค่า
+              พร้อมออปชันไฟฟ้าสีเขียวสำหรับลูกค้า</p>
+            <ul class="mt-4 text-sm text-emerald-100/90 list-disc ml-5">
+              <li>ออปชันพลังงานหมุนเวียน</li>
+              <li>Cold/Hot aisle containment</li>
+              <li>วัด/วิเคราะห์พลังงานแบบเรียลไทม์</li>
+              <li>แผน PUE อย่างต่อเนื่อง</li>
+            </ul>
+          </div>
+          <div class="aspect-video rounded-2xl overflow-hidden halo">
+            <img src="./assets/images/business-scene.jpg" class="w-full h-full object-cover" alt="Energy Efficiency">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section id="faqs" class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">FAQs</h2>
+      <div class="mt-6 space-y-3">
+        <details class="card">
+          <summary class="cursor-pointer font-semibold">เว็บไซต์รองรับภาษาอะไรบ้าง?</summary>
+          <p class="lead mt-2">ไทยและอังกฤษ (Thai / English)</p>
+        </details>
+        <details class="card">
+          <summary class="cursor-pointer font-semibold">มีส่วนข่าว (Newsroom) หรือไม่?</summary>
+          <p class="lead mt-2">มี (สำหรับ Press Release และอัปเดตข่าวสารของบริษัท)</p>
+        </details>
+        <details class="card">
+          <summary class="cursor-pointer font-semibold">รับสมัครงานดูได้ที่ไหน?</summary>
+          <p class="lead mt-2">ฝังหรือเชื่อมโยงไปยัง GULF SuccessFactors (ปรับลิงก์จริงภายหลัง)</p>
+        </details>
+        <details class="card">
+          <summary class="cursor-pointer font-semibold">มีการตรวจสอบความปลอดภัยระบบ (Penetration Test) ไหม?</summary>
+          <p class="lead mt-2">มี — ต้องการการทดสอบจากภายนอกตามข้อกำหนดของโครงการ</p>
+        </details>
+        <details class="card">
+          <summary class="cursor-pointer font-semibold">การเก็บข้อมูลส่วนบุคคลเป็นไปตามกฎหมายหรือไม่?</summary>
+          <p class="lead mt-2">ต้องปฏิบัติตาม PDPA และมาตรฐานความปลอดภัยพื้นฐาน รวมทั้งแนวทาง ISO/IEC 27001</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="card halo">
+        <div class="grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
+          <div>
+            <h3 class="text-2xl md:text-3xl font-extrabold">เริ่มวางสถาปัตยกรรม DC ของคุณวันนี้</h3>
+            <p class="lead mt-2">ทีมสถาปนิกโครงสร้างพื้นฐานพร้อมช่วยออกแบบ Capacity, Network, DR และ Roadmap สู่ AI/HPC
+              อย่างยั่งยืน</p>
+            <div class="mt-5 flex gap-3">
+              <a href="#contact" class="btn-primary">ขอใบเสนอราคา/สำรวจหน้างาน</a>
+              <a href="#solutions" class="btn-outline">ดูรายละเอียดโซลูชัน</a>
+            </div>
+          </div>
+          <!-- Contact form focus -->
+          <div id="contact" class="card border-emerald-700/50">
+            <form id="leadForm" class="space-y-3" novalidate>
+              <div class="text-lg font-bold">แบบฟอร์มติดต่อ</div>
+              <div class="grid md:grid-cols-2 gap-3">
+                <div>
+                  <label class="text-sm text-emerald-200/80">ชื่อ-นามสกุล</label>
+                  <input type="text" name="name" placeholder="สมชาย ใจดี" required />
+                </div>
+                <div>
+                  <label class="text-sm text-emerald-200/80">บริษัท/องค์กร</label>
+                  <input type="text" name="company" placeholder="บริษัท ABC จำกัด" />
+                </div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-3">
+                <div>
+                  <label class="text-sm text-emerald-200/80">อีเมล</label>
+                  <input type="email" name="email" placeholder="name@company.com" required />
+                </div>
+                <div>
+                  <label class="text-sm text-emerald-200/80">เบอร์โทร</label>
+                  <input type="tel" name="phone" placeholder="08x-xxx-xxxx" />
+                </div>
+              </div>
+              <div>
+                <label class="text-sm text-emerald-200/80">ความต้องการเบื้องต้น</label>
+                <select name="need">
+                  <option value="colo">Colocation</option>
+                  <option value="network">Cross-Connect / Network</option>
+                  <option value="storage">Storage / DR</option>
+                  <option value="edge">Edge / Private 5G</option>
+                  <option value="consult">Consult / Design</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm text-emerald-200/80">รายละเอียดเพิ่มเติม</label>
+                <textarea name="message" rows="4"
+                  placeholder="ระบุจำนวนแร็ค กำลังไฟ ความหนาแน่น (kW/rack) เครือข่าย ฯลฯ"></textarea>
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="btn-primary">ส่งข้อความ</button>
+                <span id="formMsg" class="text-sm text-emerald-200/80"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-emerald-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="font-bold">GSA Data Center</div>
+        <p class=" text-emerald-100/60 text-sm mt-2">โครงสร้างพื้นฐานศูนย์ข้อมูลสำหรับองค์กรและคลาวด์
+          พร้อมบริการหลังการขาย</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">เมนู</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#services" class="footer-link">Our Solutions</a></li>
+          <li><a href="#partners" class="footer-link">Partners</a></li>
+          <li><a href="#sustain" class="footer-link">Sustainability</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">ติดต่อ</div>
+        <ul class="space-y-2 text-sm">
+          <li class="footer-link">โทร 02‑000‑0000</li>
+          <li class="footer-link">LinkedIn: GSA Data Center</li>
+          <li class="footer-link">VPN: (ลิงก์ในองค์กร)</li>
+        </ul>
+      </div>
+      <div>
+        <a href="#contact" class="btn-outline px-3 py-2">Book a Site Visit</a>
+      </div>
+    </div>
+    <div class="text-center text-emerald-200/60 text-xs pb-6">© 2025 GSA Data Center. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // Dummy form handler (frontend only)
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('formMsg');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const name = data.get('name');
+        if (!name || !data.get('email')) {
+          msg.textContent = 'กรุณากรอกชื่อและอีเมล';
+          msg.style.color = '#fca5a5';
+          return;
+        }
+        msg.textContent = 'ส่งข้อมูลสำเร็จ (ตัวอย่าง) — ระบบจะอีเมลไปที่ contact@gsa-dc.com';
+        msg.style.color = '#a7f3d0';
+        form.reset();
+      });
+    }
+  </script>
+</body>
+
+</html>

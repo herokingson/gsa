@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <title>Newsroom | GSA Data Center</title>
+  <meta name="description"
+    content="บทความข่าว/บล็อกของ GSA Data Center ในธีมเขียว‑ดาร์ก พร้อมส่วนเนื้อหาเด่นและบทความที่เกี่ยวข้อง" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    :root{ --bg:#050f0c; --panel:#081612; --muted:#0b2019; --accent:#074c38; --accent-2:#0c6b51; --text:#e6fff5; --sub:#8bdabf; }
+    *{ font-family: 'Noto Sans Thai', system-ui, sans-serif; }
+    body{ background: var(--bg); color: var(--text); }
+    .nav-blur{ backdrop-filter: blur(10px); background: linear-gradient(to bottom, rgba(6,26,20,.55), rgba(6,26,20,.35)); }
+    .card{ @apply rounded-2xl p-6 border; background: radial-gradient(1200px 600px at 110% -10%, color-mix(in oklch, var(--accent) 12%, transparent) , transparent 40%), var(--panel); border-color: color-mix(in oklch, var(--muted) 92%, var(--accent) 8%); box-shadow: 0 10px 30px rgb(0 0 0 / .35), inset 0 1px 0 rgb(255 255 255 / .02); }
+    .lead{ @apply text-[15px] md:text-base text-emerald-100/80; }
+    .tag{ @apply inline-flex items-center gap-2 text-[11px] tracking-wide uppercase rounded-md px-2.5 py-1 border font-semibold; border-color: rgba(0,208,132,.35); color: var(--sub);}
+    .footer-link{ @apply text-emerald-100/60 hover:text-emerald-100 transition; }
+    .gridlines{ background: linear-gradient(transparent 31px, color-mix(in oklch, var(--accent) 16%, transparent) 32px), linear-gradient(90deg, transparent 31px, color-mix(in oklch, var(--accent) 16%, transparent) 32px); background-size: 32px 32px; mask-image: radial-gradient(closest-side, black 60%, transparent); }
+    .prose h2{ @apply text-xl md:text-2xl font-extrabold mt-8; }
+    .prose h3{ @apply text-lg md:text-xl font-bold mt-6; }
+    .prose p{ @apply leading-7 text-emerald-50/90 mt-3; }
+    .prose ul{ @apply list-disc pl-6 mt-3 text-emerald-50/90; }
+    input, textarea, select{
+      @apply w-full rounded-xl bg-transparent border px-4 py-3 outline-none transition;
+      border-color: color-mix(in oklch, var(--muted) 85%, #0a0 15%);
+      color: var(--text);
+    }
+    input:focus, textarea:focus, select:focus{ box-shadow: var(--ring); border-color: var(--accent); }
+    .hero{
+      position: relative; min-height: 64vh; display: grid; place-items: center; text-align: center; overflow: hidden;
+      background: radial-gradient(120% 80% at 50% 10%, rgba(0,0,0,.85), rgba(0,0,0,.9)), url('./assets/images/blog-image-01.png') center top/cover no-repeat, #081512;
+    }
+    .hero h1{ @apply text-[clamp(28px,4vw,48px)] font-extrabold tracking-tight; }
+    .hero p{ @apply max-w-3xl mx-auto text-emerald-100/70; }
+      .bg-gsa-neon{
+      @apply bg-[var(--sub)];
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 nav-blur border-b border-emerald-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="./assets/images/logo-gsa.png" alt="logo-gsa" class="h-[30px]">
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm">
+        <a href="aboutus.html" class="footer-link">About Us</a>
+        <a href="service.html" class="footer-link">Our Solutions</a>
+        <a href="news.html" class="footer-link">News</a>
+        <a href="career.html" class="footer-link">Career</a>
+        <a href="contact.html" class="footer-link">Contact</a>
+        <a href="#" class="btn-primary">เข้าสู่ระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Breadcrumb -->
+  <section class="hero">
+    <div class="px-4 py-12">
+      <div
+        class="inline-flex items-center gap-2 rounded-full border border-emerald-900/50 bg-emerald-900/20 px-3 py-1 text-xs text-emerald-100/70">
+        <span class="h-1.5 w-1.5 rounded-full bg-[var(--sub)]"></span> GSA / News
+      </div>
+      <h1 class="mt-3 text-[clamp(26px,4vw,40px)] font-extrabold tracking-tight">การทำงานของ Data Center
+        และบทบาทสำคัญในโลกธุรกิจ</h1>
+      <p class="mt-2 text-emerald-100/70 text-sm">โพสต์เมื่อ 28 สิงหาคม 2025 · หมวดหมู่: เทคโนโลยี</p>
+      <p class="max-w-3xl mx-auto lead mt-3">บทความอธิบายความหมาย โครงสร้าง การดูแลรักษา และบทบาทของ Data Center
+        ต่อธุรกิจสมัยใหม่ พร้อมสรุปย่อท้ายบทความ</p>
+    </div>
+  </section>
+
+  <!-- Article -->
+  <section id="article" class="relative">
+    <div class="absolute inset-0 gridlines opacity-60"></div>
+    <div class="mx-auto max-w-7xl px-4 py-12 relative">
+      <article class="grid md:grid-cols-[260px_1fr_320px] gap-10 items-start">
+        <!-- Sidebar -->
+        <aside class="space-y-6 sticky">
+          <div class="card hidden md:block">
+            <img src="./assets/images/computer-lab.jpg" alt="banner-block">
+          </div>
+          <div class="card">
+            <div class="text-sm text-emerald-200/80 border-b mb-3">Table of Contents</div>
+            <ul class="table-of-contents space-y-1">
+              <li>
+                <a href="#section1"
+                  class="text-sm  text-sm text-emerald-100/80 font-medium hover:text-teal-600 transition duration-300">
+                  Data Center คืออะไร?
+                </a>
+              </li>
+              <li>
+                <a href="#section2"
+                  class="text-sm  text-sm text-emerald-100/80 font-medium hover:text-teal-600 transition duration-300">
+                  การดูแลรักษา Data Center
+                </a>
+              </li>
+              <li>
+                <a href="#section3"
+                  class="text-sm  text-sm text-emerald-100/80 font-medium hover:text-teal-600 transition duration-300">
+                  สรุป
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+        <div>
+          <div class="aspect-[16/9] rounded-2xl overflow-hidden card mb-6">
+            <img src="./assets/images/blog-image-01.png" alt="Feature Image"
+              class="w-full h-full object-cover object-top" />
+          </div>
+          <div class="prose">
+            <h2>Data Center คืออะไร?</h2>
+            <p>Data Center คือสถานที่ที่มีการจัดเก็บและจัดการข้อมูลจากแหล่งต่าง ๆ โดยทั่วไปแล้วจะมีเซิร์ฟเวอร์
+              ระบบจัดเก็บข้อมูล ระบบเครือข่าย และอุปกรณ์ต่าง ๆ
+              ที่ช่วยในการประมวลผลข้อมูลที่จำเป็นสำหรับการให้บริการออนไลน์หรือการจัดการข้อมูลขององค์กร</p>
+
+            <h3>โครงสร้างของ Data Center</h3>
+            <ul>
+              <li>Servers — ประมวลผลและให้บริการ</li>
+              <li>Storage Systems — จัดเก็บข้อมูลอย่างปลอดภัย</li>
+              <li>Networking Systems — เชื่อมต่อกับผู้ใช้และบริการภายนอก</li>
+              <li>Security Systems — ความปลอดภัยทั้งกายภาพและดิจิทัล</li>
+              <li>Power Systems — พลังงานเสถียรและต่อเนื่อง</li>
+            </ul>
+
+            <h3>บทบาทของ Data Center ในธุรกิจ</h3>
+            <p>รองรับบริการออนไลน์ การจัดเก็บข้อมูลสำคัญ
+              และการวิเคราะห์ข้อมูลเพื่อพัฒนากลยุทธ์และเพิ่มประสิทธิภาพขององค์กร</p>
+
+            <h3>การดูแลรักษา Data Center</h3>
+            <ul>
+              <li>การบำรุงรักษาเซิร์ฟเวอร์และอุปกรณ์</li>
+              <li>การตรวจสอบความปลอดภัยและการเข้ารหัสข้อมูล</li>
+              <li>การควบคุมพลังงานเพื่อลดต้นทุนและเพิ่มประสิทธิภาพ</li>
+            </ul>
+
+            <h3>สรุป</h3>
+            <p>Data Center มีความสำคัญอย่างยิ่งในโลกธุรกิจสมัยใหม่ ทั้งด้านการให้บริการ การจัดเก็บ และการวิเคราะห์ข้อมูล
+              รวมถึงต้องใส่ใจการดูแลรักษาและความปลอดภัยเพื่อความเสถียรของระบบ</p>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6 sticky">
+          <div class="card">
+            <div class="text-sm text-emerald-200/80 mb-2">Breadcrumb</div>
+            <div class="text-sm text-emerald-100/80">Home › Blog › การทำงานของ Data Center และบทบาทสำคัญในโลกธุรกิจ
+            </div>
+          </div>
+          <div class="card">
+            <div class="text-sm text-emerald-200/80">หมวดหมู่</div>
+            <div class="mt-2 flex flex-wrap gap-2">
+              <span class="tag">เทคโนโลยี</span>
+              <span class="tag">Data Center</span>
+              <span class="tag">Business</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="font-bold">แชร์บทความ</div>
+            <div class="mt-2 text-sm text-emerald-100/80">Facebook • LinkedIn • X</div>
+          </div>
+        </aside>
+      </article>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section id="related" class="pt-14 md:pt-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold">บทความที่เกี่ยวข้อง</h2>
+      <div class="grid md:grid-cols-4 gap-6 mt-6">
+        <!-- 1 -->
+        <a class="card block" href="#">
+          <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-emerald-900/20"><img
+              src="./assets/images/position-image-job-03.png" alt="blog-news-image-01"></div>
+          <div class="text-sm text-emerald-200/80">12 เมษายน 2568</div>
+          <div class="font-bold mt-1">การจัดการ Cookies ในเบราว์เซอร์</div>
+        </a>
+        <!-- 2 -->
+        <a class="card block" href="#">
+          <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-emerald-900/20"><img
+              src="./assets/images/position-image-job-03.png" alt="blog-news-image-02"></div>
+          <div class="text-sm text-emerald-200/80">12 เมษายน 2568</div>
+          <div class="font-bold mt-1">การจัดการ Cookies ในเบราว์เซอร์</div>
+        </a>
+        <!-- 3 -->
+        <a class="card block" href="#">
+          <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-emerald-900/20"><img
+              src="./assets/images/position-image-job-03.png" alt="blog-news-image-03"></div>
+          <div class="text-sm text-emerald-200/80">12 เมษายน 2568</div>
+          <div class="font-bold mt-1">การจัดการ Cookies ในเบราว์เซอร์</div>
+        </a>
+        <!-- 4 -->
+        <a class="card block" href="#">
+          <div class="aspect-video rounded-lg overflow-hidden mb-3 bg-emerald-900/20"><img
+              src="./assets/images/position-image-job-03.png" alt="blog-news-image-04"></div>
+          <div class="text-sm text-emerald-200/80">12 เมษายน 2568</div>
+          <div class="font-bold mt-1">การจัดการ Cookies ในเบราว์เซอร์</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Contact -->
+  <section class="py-14 md:py-20">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="card halo">
+        <div class="grid md:grid-cols-[1.4fr_1fr] gap-8 items-center">
+          <div>
+            <h3 class="text-2xl md:text-3xl font-extrabold">ติดตามข่าวสารจากเรา</h3>
+            <p class="lead mt-2">สมัครรับอัปเดตบทความ ข่าว และกิจกรรมล่าสุดของ GSA</p>
+            <div class="mt-5 flex gap-3">
+              <a href="#subscribe" class="btn-primary">Subscribe</a>
+              <a href="#contact" class="btn-outline">ติดต่อทีมงาน</a>
+            </div>
+          </div>
+          <div id="subscribe" class="card border-emerald-700/50">
+            <form id="subForm" class="space-y-3" novalidate>
+              <div class="text-lg font-bold">สมัครรับข่าวสาร</div>
+              <div>
+                <label class="text-sm text-emerald-200/80">อีเมล</label>
+                <input type="email" name="email" placeholder="name@company.com" required />
+              </div>
+              <div class="flex items-center gap-3">
+                <button type="submit" class="btn-primary">Subscribe</button>
+                <span id="subMsg" class="text-sm text-emerald-200/80"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-emerald-900/40">
+    <div class="mx-auto max-w-7xl px-4 py-10 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="font-bold">GSA Data Center</div>
+        <p class=" text-emerald-100/60 text-sm mt-2">โครงสร้างพื้นฐานศูนย์ข้อมูลสำหรับองค์กรและคลาวด์
+          พร้อมบริการหลังการขาย</p>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">เมนู</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="footer-link">News</a></li>
+          <li><a href="#related" class="footer-link">Related Posts</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold mb-3">ติดต่อ</div>
+        <ul class="space-y-2 text-sm">
+          <li class="footer-link">โทร 02‑000‑0000</li>
+          <li class="footer-link">LinkedIn: GSA Data Center</li>
+          <li class="footer-link">VPN: (ลิงก์ในองค์กร)</li>
+        </ul>
+      </div>
+      <div>
+        <a href="#contact" class="btn-outline px-3 py-2">Book a Site Visit</a>
+      </div>
+    </div>
+    <div class="text-center text-emerald-200/60 text-xs pb-6">© 2025 GSA Data Center. All rights reserved.</div>
+  </footer>
+
+  <script>
+    // smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // forms
+    const subForm = document.getElementById('subForm');
+    const subMsg = document.getElementById('subMsg');
+    if (subForm) {
+      subForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(subForm);
+        if (!data.get('email')) { subMsg.textContent = 'กรุณากรอกอีเมล'; subMsg.style.color = '#fca5a5'; return; }
+        subMsg.textContent = 'สมัครสำเร็จ ตัวอย่างระบบ — ขอบคุณค่ะ/ครับ';
+        subMsg.style.color = '#a7f3d0';
+        subForm.reset();
+      });
+    }
+  </script>
+</body>
+
+</html>
