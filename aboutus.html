@@ -77,6 +77,31 @@
       .bg-gsa-neon{
       @apply bg-[var(--sub)];
     }
+
+    @media (min-width: 900px) {
+      /* nav .links {
+        display: none
+      } */
+
+      .mobile {
+        display: inline-flex
+      }
+
+      .mobile-menu {
+        display: none;
+        border-top: 1px solid var(--line)
+      }
+
+      .mobile-menu.open {
+        display: block
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line)
+      }
+    }
   </style>
 </head>
 
@@ -95,6 +120,30 @@
         <a href="contact.html" class="footer-link">Contact</a>
         <a href="#" class="btn-primary">เข้าสู่ระบบ</a>
       </nav>
+      <button aria-controls="mobileMenu" aria-expanded="false" aria-label="เมนู"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded bg-[var(--accent-2)] text-white border border-black hover:bg-[var(--accent)]/90 focus:outline-none focus:ring-2 focus:ring-white/20"
+        id="hamburgerBtn">
+        <!-- ไอคอนเปิด -->
+        <svg data-icon="open" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+          </path>
+        </svg>
+        <!-- ไอคอนปิด -->
+        <svg class="hidden" data-icon="close" height="24" viewbox="0 0 24 24" width="24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M6 18l12-12" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2">
+          </path>
+        </svg>
+      </button>
+    </div>
+    <!-- เมนูมือถือ (ซ่อนไว้ก่อน) -->
+    <div class="nav-blur container mobile-menu md:hidden hidden px-[25px] font-bold " id="mobileMenu">
+      <a class="block py-3" href="./aboutus.html">About</a>
+      <a class="block py-3" href="./service.html">Our Solutions</a>
+      <a class="block py-3" href="./news.html">News</a>
+      <a class="block py-3" href="./career.html">Career</a>
+      <a class="block py-3" href="./contact.html">Contact</a>
+      <a class="btn-primary block my-3 w-full justify-center" href="#">Get Quote</a>
     </div>
   </header>
 
@@ -517,6 +566,48 @@
         form.reset();
       });
     }
+
+    // Mobile menu toggle
+    document.querySelector(".mobile")?.addEventListener("click", function () {
+      document.getElementById("mobileMenu").classList.toggle("open");
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener("click", (e) => {
+        const id = a.getAttribute("href").slice(1);
+        const section = document.getElementById(id);
+        if (section) {
+          e.preventDefault();
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    (function () {
+      const btn = document.getElementById("hamburgerBtn");
+      const menu = document.getElementById("mobileMenu");
+      const openIcon = btn.querySelector('[data-icon="open"]');
+      const closeIcon = btn.querySelector('[data-icon="close"]');
+
+      function toggle(force) {
+        const isOpen =
+          typeof force === "boolean" ? force : menu.classList.contains("hidden");
+        menu.classList.toggle("hidden", !isOpen);
+        document.body.classList.toggle("overflow-hidden", isOpen); // กันหน้าเลื่อนตอนเปิดเมนู
+        btn.setAttribute("aria-expanded", isOpen);
+        openIcon.classList.toggle("hidden", isOpen);
+        closeIcon.classList.toggle("hidden", !isOpen);
+      }
+
+      btn.addEventListener("click", () => toggle());
+      menu.addEventListener("click", (e) => {
+        if (e.target.matches("a")) toggle(false);
+      });
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") toggle(false);
+      });
+    })();
   </script>
 </body>
 
